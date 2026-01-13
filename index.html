@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CACA</title>
 </head>
 <body>
+    <div id="current-time" style="font-size:1rem; margin-bottom:8px; font-weight:500;"></div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('fr-FR', options);
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
     <h1>Test</h1>
     <h2>Tesfalem + Yanis = <font color="red">❤</font></h2>
     <h3>Kamil + Burak = <font color="red">❤</font></h3>
